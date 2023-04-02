@@ -1,1 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
+
+#page-content{
+
+  flex: 1 0 auto;
+}
+
+body,html {
+  height: 100%;
+  background-color: #f9f5f5;
+}
+
+body{
+  color: #333333;
+  font-family: Arial, sans-serif;
+}
+
+h1,h2,h3{
+  color: #555555;
+}
+
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
