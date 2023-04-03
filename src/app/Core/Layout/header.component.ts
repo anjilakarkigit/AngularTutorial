@@ -9,7 +9,7 @@ export class HeaderComponent implements OnInit {
 
   LoggedIn: boolean = false;
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+
   }
 
 
