@@ -3,11 +3,17 @@
     <div class="col-sm-3"></div>
     <div class="col-sm-6">
       <div class="card">
-        <div class="card-title">Login Form</div>
+        <div class="alert alert-primary" role="alert" *ngIf="flag">
+          You have Logged in Successfully!
+        </div>
+        <div class="alert alert-danger" role="alert" *ngIf="invalidLogin">
+          Login Failed! Please check your Email and Password
+        </div>
+        <h4 class="card-title">Login Form</h4>
         <div class="d-flex justify-content-center">
           <form #loginForm="ngForm" (submit)="Login(loginForm)">
             <div class="form-group">
-              <label for="email">Email:</label>
+              <label for="email">Email: </label>
               <input
                 type="email"
                 [(ngModel)]="loginData.email"
@@ -17,12 +23,12 @@
               />
             </div>
             <div class="form-group">
-              <label for="password">Password:</label>
+              <label for="password">Password: </label>
               <input
-                type="password"
+                type="email"
                 [(ngModel)]="loginData.password"
                 name="password"
-                class="form-control-inline m-3"
+                class="form-control-inline m3"
                 required
               />
             </div>
@@ -31,7 +37,7 @@
                 type="submit"
                 value="Login"
                 class="mb-3"
-                disabled="!loginForm.valid"
+                [disabled]="!loginForm.valid"
               />
             </div>
           </form>
