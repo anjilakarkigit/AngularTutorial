@@ -33,6 +33,7 @@ export class AccountService {
         map((response: any) => {
           if (response) {
             localStorage.setItem('token', response.token);
+            this.populateUserInfoFromToken();
             return true;
           }
           return false;
